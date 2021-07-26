@@ -23,8 +23,8 @@ public class DarazAutomationTest {
         //Find login element
         driver.findElement(By.xpath("//a[text()='login']")).click();
         //Find email and password field
-        driver.findElement(By.xpath("//input[@placeholder='Please enter your Phone Number or Email']")).sendKeys("9841317477");
-        driver.findElement(By.xpath("//input[@placeholder='Please enter your password']")).sendKeys("tralala123");
+        driver.findElement(By.xpath("//input[@placeholder='Please enter your Phone Number or Email']")).sendKeys("test@abc.com");
+        driver.findElement(By.xpath("//input[@placeholder='Please enter your password']")).sendKeys("testpassword");
         //find login button element and click
         driver.findElement(By.xpath("//button[@type='submit']")).click();
 
