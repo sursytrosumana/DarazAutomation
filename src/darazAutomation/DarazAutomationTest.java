@@ -53,16 +53,20 @@ public class DarazAutomationTest {
         Thread.sleep(1000);
         lastItem.click();
 
-        //Get name of the product
+        //Get name of the product selected
         String oldName = driver.findElement(By.cssSelector(".pdp-mod-product-badge-title")).getText();
+        
         //Clicked add to cart button
         driver.findElement(By.xpath("//div[@class='pdp-cart-concern']//button[2]")).click();
 
         //Clicked Goto Cart button
         driver.findElement(By.xpath("//button[text()='GO TO CART']")).click();
+        
+        //Get name of the product added to the cart
+        String newName = driver.findElement(By.xpath("//div[@class='content']/a")).getText();
 
         //Validate product in the cart with selected product
-        Assert.assertEquals(oldName, "Solid Short Dingo Boot For Men (6810-1A)");
+        Assert.assertEquals(newName, oldName);
 
         //Close browser
         driver.close();
